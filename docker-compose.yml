@@ -47,6 +47,8 @@ services:
       - DATABASE_URL=postgresql://postgres:nexus@postgres:5432/thenexus
       - PINECONE_API_KEY=${PINECONE_API_KEY}
       - VERIFICATION_SERVICE_URL=http://verification:8080
+      - JWT_SECRET_KEY=${JWT_SECRET_KEY}
+      - HCAPTCHA_SECRET=${HCAPTCHA_SECRET}
     depends_on:
       postgres:
         condition: service_healthy
@@ -74,6 +76,7 @@ services:
     environment:
       - VITE_API_URL=http://localhost:8000
       - VITE_VERIFICATION_URL=http://localhost:8080
+      - VITE_HCAPTCHA_SITE_KEY=${VITE_HCAPTCHA_SITE_KEY}
 
 volumes:
   postgres-data:
