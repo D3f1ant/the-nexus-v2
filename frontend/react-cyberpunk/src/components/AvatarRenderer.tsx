@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import type { AvatarConfig, FacialMorphs, BodyMorphs, Species } from '../types/avatar'
+import type { AvatarConfig, BodyMorphs, Species } from '../types/avatar'
 
 interface Props {
   config: AvatarConfig
@@ -506,8 +506,6 @@ function drawCybernetics(ctx: CanvasRenderingContext2D, s: number, config: Avata
   }
 
   if (cyber.arms && cyber.armsIntensity > 0) {
-    const m = config.facialMorphs
-    const headW = morph(m.faceWidthAtCheeks, s * 0.22, s * 0.26, s * 0.31)
     const shoulderW = morph(config.body.shoulderWidth, s * 0.28, s * 0.32, s * 0.38)
     const torsoTop = cy - s * 0.05
     drawCyberPart(cx - shoulderW / 2 - s * 0.06, torsoTop, s * 0.07, s * 0.22, cyber.armsIntensity)

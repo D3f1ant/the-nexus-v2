@@ -63,7 +63,7 @@ export default function LoginPage() {
   const [hrEmail, setHrEmail] = useState('')
   const [hrPassword, setHrPassword] = useState('')
   const [hrConfirm, setHrConfirm] = useState('')
-  const [captchaToken, setCaptchaToken] = useState('')
+  const [, setCaptchaToken] = useState('')
 
   // Human login fields
   const [hlEmail, setHlEmail] = useState('')
