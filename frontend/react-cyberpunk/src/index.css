@@ -1,0 +1,42 @@
+:root {
+  --neon-green: #00ff88;
+  --neon-teal: #00ffd5;
+  --dark-bg: #0a0a0a;
+  --panel-bg: rgba(0, 255, 136, 0.05);
+  --border-glow: rgba(0, 255, 136, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--neon-green);
+  font-family: 'Courier New', monospace;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--neon-teal);
+  text-decoration: none;
+}
+
+button {
+  background: transparent;
+  border: 1px solid var(--neon-green);
+  color: var(--neon-green);
+  padding: 12px 24px;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--neon-green);
+  color: var(--dark-bg);
+  box-shadow: 0 0 20px var(--neon-green);
+}
